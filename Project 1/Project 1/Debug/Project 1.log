@@ -1,0 +1,6 @@
+﻿  Process.cpp
+  problem1.cpp
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(41,21): warning C4018: '<=': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(64,21): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Project 1.vcxproj -> D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Debug\Project 1.exe
