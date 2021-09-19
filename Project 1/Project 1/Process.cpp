@@ -46,7 +46,11 @@ int Process::getWaitTime() {
 	return waitTime;
 }
 
-void Process::setExeTimeRem() {
+void Process::setExeTimeRem(int time) {
+	exeTimeRemaining = time;
+}
+
+void Process::setExeTimeRemRR() {
 	exeTimeRemaining--;
 }
 

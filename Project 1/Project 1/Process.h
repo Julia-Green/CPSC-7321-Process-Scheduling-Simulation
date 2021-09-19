@@ -10,7 +10,8 @@ class Process {
 		int getExeTimeRem();
 		int getWaitTime();
 
-		void setExeTimeRem();
+		void setExeTimeRem(int time);
+		void setExeTimeRemRR(); // For Round Robin
 		void setWaitTime(int time);
 
 	private:
