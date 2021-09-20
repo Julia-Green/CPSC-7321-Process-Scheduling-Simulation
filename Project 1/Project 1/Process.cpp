@@ -7,28 +7,18 @@ Process::Process(int servTime, int ariveTime) {
 	arrivalTime = ariveTime;
 	exeTimeRemaining = servTime;
 	waitTime = 0;
-	processGroup; //remove
-	priority; //remove
+	processGroup = 0; //Not nessicary for my problem 2
+	priority = 1; 
 };
 
-//Process::Process(int servTime, int prior) {
-//	serviceTime = servTime;
-//	int arrivalTime;
-//	int exeTimeTemaining;
-//	int waitTime;
-//	int processGroup;
-//	int priority = prior;
-//};
-
-
-//Process::Process(int servTime, int prior, int arivTime) {
-//	serviceTime = servTime;
-//	int arrivalTime = arivTime;
-//	int exeTimeTemaining;
-//	int waitTime;
-//	int processGroup;
-//	int priority = prior;
-//};
+Process::Process(int servTime, int ariveTime, int prior) {
+	serviceTime = servTime;
+	arrivalTime = ariveTime;
+	exeTimeRemaining = servTime;
+	waitTime = 0;
+	processGroup = 0; //Not nessicary for my problem 2
+	priority = prior;
+};
 
 int Process::getServTime() {
 	return serviceTime;

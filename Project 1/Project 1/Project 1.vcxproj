@@ -140,8 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="problem1.cpp" />
-    <ClCompile Include="problem2.cpp" />
-    <ClCompile Include="problem3.cpp" />
     <ClCompile Include="Process.cpp" />
   </ItemGroup>
   <ItemGroup>

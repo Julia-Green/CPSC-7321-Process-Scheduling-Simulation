@@ -3,15 +3,15 @@
 class Process {
 	public:
 		Process(int servTime, int ariveTime);
-		//Process(int servTime, int prior);
-		//Process(int servTime, int prior, int arivTime);
+		Process(int servTime, int ariveTime, int prior);
+
 		int getServTime();
 		int getAriveTime();
 		int getExeTimeRem();
 		int getWaitTime();
 
 		void setExeTimeRem(int time);
-		void setExeTimeRemRRSRT(); // For Round Robin and Shortest Remaining Time
+		void setExeTimeRemRRSRT(); // For Round Robin and Shortest Remaining Time Algorithms
 		void setWaitTime(int time);
 
 	private:
