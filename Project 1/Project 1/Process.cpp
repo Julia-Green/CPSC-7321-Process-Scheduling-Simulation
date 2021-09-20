@@ -50,8 +50,13 @@ void Process::setExeTimeRem(int time) {
 	exeTimeRemaining = time;
 }
 
-void Process::setExeTimeRemRR() {
-	exeTimeRemaining--;
+void Process::setExeTimeRemRRSRT() {
+	if (exeTimeRemaining > 0) {
+		exeTimeRemaining--;
+	}
+	else {
+		exeTimeRemaining = 0;
+	}
 }
 
 void Process::setWaitTime(int time) {

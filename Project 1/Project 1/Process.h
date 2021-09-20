@@ -11,7 +11,7 @@ class Process {
 		int getWaitTime();
 
 		void setExeTimeRem(int time);
-		void setExeTimeRemRR(); // For Round Robin
+		void setExeTimeRemRRSRT(); // For Round Robin and Shortest Remaining Time
 		void setWaitTime(int time);
 
 	private:

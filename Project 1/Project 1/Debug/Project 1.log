@@ -1,3 +1,5 @@
 ﻿  problem1.cpp
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(42,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(21,20): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(67,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(140,22): warning C4018: '<': signed/unsigned mismatch
   Project 1.vcxproj -> D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Debug\Project 1.exe
