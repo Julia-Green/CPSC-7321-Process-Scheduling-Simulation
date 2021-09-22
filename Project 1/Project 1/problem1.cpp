@@ -130,7 +130,9 @@ void shortestRemTime(std::vector<Process> queue) { //restructure
 		std::cout << p.getAriveTime() << " " << p.getExeTimeRem() << std::endl << std::endl;
 	} std::cout << std::endl;
 
-	for (int i = 0; i < maxTime; i++) {//change to while loop
+	while (1) {
+		bool finished = false;
+	//for (int i = 0; i < maxTime; i++) {//change to while loop
 		if (currentTime <= queue.at(queue.size() - 1).getAriveTime()) {			
 			for (int j = 0; j < queue.size(); j++) {
 				if (queue.at(j).getAriveTime() <= currentTime) {
@@ -141,22 +143,24 @@ void shortestRemTime(std::vector<Process> queue) { //restructure
 				std::sort(secondaryQueue.begin(), secondaryQueue.end(), [](std::tuple<int, Process> i, std::tuple<int, Process> j) { //Sort based on remaining exe times
 					return ((std::get<1>(i).getExeTimeRem()) < (std::get<1>(j).getExeTimeRem())); });
 				queue.at(std::get<0>(secondaryQueue[0])).setExeTimeRemRRSRT(); // Gets the main queue index from the first tuple in the sorted secondary queue and processes that process this second
+				
+																			   
 				//queue.at(std::get<0>(secondaryQueue[0])).setWaitTime(sum);//set wait time
 			}
+			secondaryQueue.clear();
 		}
 		else {
 			sort(queue.begin(), queue.end(), [](Process i, Process j) {
 				return(i.getExeTimeRem() < j.getExeTimeRem()); });
-			
 			queue.at(0).setExeTimeRemRRSRT();
 
 			//queue.at(0).setWaitTime(sum);//set wait time
 //			sum = sum + p.getServTime();}
 			//adjust all other wait times
 		}
-		for (Process p : queue) { //adding proccesses more than once
-			if (p.getExeTimeRem() == 0) {
-				completedQueue.push_back(p);
+		for (int i = 0; i < queue.size(); i++) { //adding proccesses more than once
+			if (queue.at(i).getExeTimeRem() == 0) {
+				completedQueue.push_back(queue.at(i));
 			}
 		}
 		remove_if(queue.begin(), queue.end(), [](Process i) {
@@ -166,6 +170,10 @@ void shortestRemTime(std::vector<Process> queue) { //restructure
 		/*for (int i = 0; i < secondaryQueue.size(); i++) {
 			std::cout << "a " << secondaryQueue.size() << std::endl << std::endl;
 		}*/
+		if (queue.empty()) {// not breaking out
+			break;
+
+		}
 	}
 
 	std::sort(completedQueue.begin(), completedQueue.end(), [](Process i, Process j) { //Sort based on remaining exe times
