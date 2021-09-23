@@ -43,7 +43,7 @@ void firstComeFirstServe(std::vector<Process> queue) { //No Preemption WORKS
 
 
 //FCFS for problem 3
-void firstComeFirstServeP(std::vector<Process> queue) { //No Preemption WORKS
+void firstComeFirstServeP(std::vector<Process> queue) { // WORKS
 	std::cout << "First Come First Serve" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
@@ -58,7 +58,7 @@ void firstComeFirstServeP(std::vector<Process> queue) { //No Preemption WORKS
 	std::vector<Process> complete;
 	int currentTime{ 0 };
 	while (1) {
-		//wait for arivall of a process
+		//wait for arival of a process
 		if (queue.size() != 0) {
 			if (currentTime >= queue.at(0).getAriveTime()) {
 				running.push_back(queue.at(0)); //Add to running 
@@ -81,10 +81,9 @@ void firstComeFirstServeP(std::vector<Process> queue) { //No Preemption WORKS
 				}
 			}
 
-			if (running.at(0).getExeTimeRem() == 0) { //Checks to see if process is done and removes it if so clears if just on element remains
-				//if (running.size() > 1) {
+			if (running.at(0).getExeTimeRem() == 0) { //Checks to see if process is done and removes it 
 					complete.push_back(running.at(0)); //Add to running 
-					running.erase(running.begin()); //remove from queue
+					running.erase(running.begin()); //Remove from queue
 			}
 
 			////Testing
@@ -145,6 +144,7 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 				queue.at(i).setExeTimeRem2();
 				queue.at(i).setWaitTime(wait);
 				wait = wait + 1;
+				std::cout << wait << std::endl << sum << std::endl;
 			}
 			else {
 				std::cout << std::endl << "Process finished running" << std::endl << std::endl;
@@ -163,6 +163,11 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 		}
 	}
 
+	for (Process p : queue) {
+		std::cout << p.getServTime() << " " << p.getWaitTime() << " " << p.getAriveTime() << std::endl;
+	}
+
+	std::cout << std::endl;
 	//Normalized Turnaround Times
 	std::vector<int> TATs;
 	for (Process p : queue) {
@@ -173,7 +178,6 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 	float mTAT{ 0 };
 	for (int i : TATs) {
 		mTAT = mTAT + i;
-		std::cout << mTAT << std::endl << std::endl;
 	}
 	mTAT = mTAT / TATs.size();
 
@@ -185,6 +189,91 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 		<< "Maximum Wait Time: " << queue.at(queue.size() - 1).getWaitTime() << std::endl;
 
 }
+
+//RR for problem 3
+void roundRobinP(std::vector<Process> queue) { //Testing
+	std::cout << "Round Robin" << std::endl << std::endl;
+	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
+		return (i.getAriveTime() < j.getAriveTime()); });
+
+	int temp = queue.size();
+	std::vector<Process> running;
+	std::vector<Process> complete;
+	int currentTime{ 0 };
+
+	while (1) {
+		//wait for arival of a process
+		if (queue.size() != 0) {
+			if (currentTime >= queue.at(0).getAriveTime()) {
+				running.push_back(queue.at(0)); //Add to running 
+				queue.erase(queue.begin()); //Remove from queue
+			}
+		}
+		if (!running.empty()) {
+			for (int i = 0; i < running.size(); i++) {
+				running.at(i).setExeTimeRem2(); //Runs processes
+			}
+
+			for (int i = 0; i < running.size() - 1; i++) {
+				for (Process p : running) {
+					running.at(i).setWaitTime2();//Add 1s to running proccess' wait times
+				}
+			}
+
+
+			//Resort running based on priorities
+			for (int i = 0; i < running.size() - 1; i++) {
+				if (running.at(i + 1).getPriority() > running.at(i).getPriority()) {//check here
+					std::swap(running.at(i), running.at(i + 1));
+				}
+			}
+
+			for (int i = 0; i < running.size(); i++) {
+				if (running.at(i).getExeTimeRem() == 0) { //Checks to see if process is done and removes it not triggering
+					complete.push_back(running.at(i)); //Add to running 
+					running.erase(running.begin() + i); //Remove from queue
+				}
+			}
+
+			////Testing
+			//for (Process p : running) {
+			//	std::cout << p.getServTime() << " " << p.getPriority() << " "<< p.getExeTimeRem() << std::endl;
+			//}
+		}
+		//else {
+		//	std::cout << "empty" << std::endl << std::endl;
+		//}
+
+		if (complete.size() == temp) {
+			break;
+		}
+		currentTime++;
+	}
+	
+	//Normalized Turnaround Times
+	std::vector<int> TATs;
+	for (Process p : complete) {
+		TATs.push_back((p.getServTime() + p.getWaitTime()) / p.getServTime());
+	}
+
+	//Mean Turnaround Time
+	float mTAT{ 0 };
+	for (int i : TATs) {
+		mTAT = mTAT + i;
+	}
+	mTAT = mTAT / TATs.size();
+
+	//Max Wait Time
+	std::sort(complete.begin(), complete.end(), [](Process i, Process j) { //Sort based on wait times
+		return (i.getWaitTime() < j.getWaitTime()); });
+
+	std::cout << "Mean Turnaround Time: " << mTAT << std::endl
+		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl;
+}
+
+
+
+
 
 
 //WARNING: SPEGHETTI AHEAD!!!!
@@ -305,7 +394,7 @@ int main() {
 
 
 	//Empty queue for problem 2
-	queue.clear();
+	//queue.clear();
 
 	////Problem 2) Begin with the generation of a similar dataset to problem 1, but this time, use a PRNG to 
 	////(i) give half the processes service times between 80 and 100 milliseconds and
@@ -385,12 +474,11 @@ int main() {
 
 	std::cout << "Problem 3" << std::endl;
 
-	firstComeFirstServeP(queue);
 	////First Come First Serve (No Preemption)
-	//firstComeFirstServe(queue);
+	firstComeFirstServeP(queue);
 
 	////Round Robin
-	//roundRobin(queue);
+	roundRobinP(queue);
 
 	////Shortest Remaining Time
 	//shortestRemTime(queue);

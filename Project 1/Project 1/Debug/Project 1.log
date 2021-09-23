@@ -2,8 +2,12 @@
 D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(16,20): warning C4018: '<': signed/unsigned mismatch
 D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(71,22): warning C4018: '<': signed/unsigned mismatch
 D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(77,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(148,21): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(223,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(247,21): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(252,3): warning C4834: discarding return value of function with 'nodiscard' attribute
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(141,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(213,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(217,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(225,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(231,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(306,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(330,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(335,3): warning C4834: discarding return value of function with 'nodiscard' attribute
   Project 1.vcxproj -> D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Debug\Project 1.exe
