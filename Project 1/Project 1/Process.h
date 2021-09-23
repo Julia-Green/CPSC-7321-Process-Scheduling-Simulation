@@ -9,10 +9,12 @@ class Process {
 		int getAriveTime();
 		int getExeTimeRem();
 		int getWaitTime();
+		int getPriority();
 
 		void setExeTimeRem(int time);
-		void setExeTimeRemRRSRT(); // For Round Robin and Shortest Remaining Time Algorithms
+		void setExeTimeRem2(); // For Round Robin and Shortest Remaining Time Algorithms
 		void setWaitTime(int time);
+		void setWaitTime2();
 
 	private:
 		int serviceTime; //Time required for the process to run overall

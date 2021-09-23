@@ -36,11 +36,15 @@ int Process::getWaitTime() {
 	return waitTime;
 }
 
+int Process::getPriority() {
+	return priority;
+}
+
 void Process::setExeTimeRem(int time) {
 	exeTimeRemaining = time;
 }
 
-void Process::setExeTimeRemRRSRT() {
+void Process::setExeTimeRem2() {
 	if (exeTimeRemaining > 0) {
 		exeTimeRemaining--;
 	}
@@ -51,4 +55,8 @@ void Process::setExeTimeRemRRSRT() {
 
 void Process::setWaitTime(int time) {
 	waitTime = time;
+}
+
+void Process::setWaitTime2() {
+	waitTime++;
 }

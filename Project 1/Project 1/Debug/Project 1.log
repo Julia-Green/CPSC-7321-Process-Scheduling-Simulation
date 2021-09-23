@@ -1,7 +1,9 @@
-﻿  problem1.cpp
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(16,20): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(62,21): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(137,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(161,21): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\problem1.cpp(166,3): warning C4834: discarding return value of function with 'nodiscard' attribute
+﻿  Source.cpp
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(16,20): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(71,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(77,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(148,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(223,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(247,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(252,3): warning C4834: discarding return value of function with 'nodiscard' attribute
   Project 1.vcxproj -> D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Debug\Project 1.exe
