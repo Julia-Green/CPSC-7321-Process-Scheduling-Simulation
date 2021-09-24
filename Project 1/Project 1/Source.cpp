@@ -29,7 +29,6 @@ void firstComeFirstServe(std::vector<Process> queue) { //No Preemption WORKS
 	float mTAT{ 0 };
 	for (int i : TATs) {
 		mTAT = mTAT + i;
-		std::cout << mTAT << std::endl << std::endl;
 	}
 	mTAT = mTAT / TATs.size();
 
@@ -49,14 +48,10 @@ void firstComeFirstServeP(std::vector<Process> queue) { // WORKS
 		return (i.getAriveTime() < j.getAriveTime()); });
 
 	int temp = queue.size();
-	for (Process p : queue) {
-		std::cout << p.getServTime() << " " << p.getPriority() << " " << p.getAriveTime() << std::endl;
-	}
-	std::cout << std::endl << std::endl;
-
 	std::vector<Process> running;
 	std::vector<Process> complete;
 	int currentTime{ 0 };
+
 	while (1) {
 		//wait for arival of a process
 		if (queue.size() != 0) {
@@ -109,18 +104,17 @@ void firstComeFirstServeP(std::vector<Process> queue) { // WORKS
 		return (i.getWaitTime() < j.getWaitTime()); });
 
 	std::cout << "Mean Turnaround Time: " << mTAT << std::endl
-		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl;
+		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl << std::endl;
 }
 
 
-
-
+//RR for problem 1 and 2
 void roundRobin(std::vector<Process> queue) { //Quantum = 1ms 
 	std::cout << "Round Robin" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
 
-	int sum{ 0 };//remove when done testing
+	int sum{ 0 };
 	int wait{ 0 };
 
 	while (1) {
@@ -132,30 +126,15 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 				queue.at(i).setExeTimeRem2();
 				queue.at(i).setWaitTime(wait);
 				wait = wait + 1;
-				std::cout << wait << std::endl << sum << std::endl;
-			}
-			else {
-				std::cout << std::endl << "Process finished running" << std::endl << std::endl;
 			}
 			sum = sum + queue.at(i).getExeTimeRem();
 		}
-		std::cout << std::endl << sum << std::endl;
-
-		for (Process p : queue) {
-			std::cout << p.getExeTimeRem() << " " << p.getWaitTime() << std::endl;
-		}
 
 		if (finished == true) { //If all processes are done break out of while loop
-			std::cout << std::endl << "done" << std::endl << std::endl;
 			break;
 		}
 	}
 
-	for (Process p : queue) {
-		std::cout << p.getServTime() << " " << p.getWaitTime() << " " << p.getAriveTime() << std::endl;
-	}
-
-	std::cout << std::endl;
 	//Normalized Turnaround Times
 	std::vector<int> TATs;
 	for (Process p : queue) {
@@ -177,6 +156,7 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 		<< "Maximum Wait Time: " << queue.at(queue.size() - 1).getWaitTime() << std::endl;
 
 }
+
 
 //RR for problem 3
 void roundRobinP(std::vector<Process> queue) { //Testing
@@ -221,16 +201,7 @@ void roundRobinP(std::vector<Process> queue) { //Testing
 					running.erase(running.begin() + i); //Remove from queue
 				}
 			}
-
-			////Testing
-			//for (Process p : running) {
-			//	std::cout << p.getServTime() << " " << p.getPriority() << " "<< p.getExeTimeRem() << std::endl;
-			//}
 		}
-		//else {
-		//	std::cout << "empty" << std::endl << std::endl;
-		//}
-
 		if (complete.size() == temp) {
 			break;
 		}
@@ -255,11 +226,12 @@ void roundRobinP(std::vector<Process> queue) { //Testing
 		return (i.getWaitTime() < j.getWaitTime()); });
 
 	std::cout << "Mean Turnaround Time: " << mTAT << std::endl
-		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl;
+		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl << std::endl;
 }
 
 
-void shortestRemTime(std::vector<Process> queue) { // WORKS
+//SRT for problem 1 and 2
+void shortestRemTime(std::vector<Process> queue) {
 	std::cout << "Shortest Time Remaining" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
@@ -321,25 +293,21 @@ void shortestRemTime(std::vector<Process> queue) { // WORKS
 		return (i.getWaitTime() < j.getWaitTime()); });
 
 	std::cout << "Mean Turnaround Time: " << mTAT << std::endl
-		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl;
+		<< "Maximum Wait Time: " << complete.at(complete.size() - 1).getWaitTime() << std::endl << std::endl;
 }
 
 
 //SRT for problem 3
-void shortestRemTimeP(std::vector<Process> queue) { // WORKS
+void shortestRemTimeP(std::vector<Process> queue) {
 	std::cout << "Shortest Time Remaining" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
 
 	int temp = queue.size();
-	for (Process p : queue) {
-		std::cout << p.getServTime() << " " << p.getPriority() << " " << p.getAriveTime() << std::endl;
-	}
-	std::cout << std::endl << std::endl;
-
 	std::vector<Process> running;
 	std::vector<Process> complete;
 	int currentTime{ 0 };
+
 	while (1) {
 		//wait for arival of a process
 		if (queue.size() != 0) {
@@ -419,7 +387,7 @@ int main() {
 	//waiting time. Provide an analysis of the results.
 
 	//Populating the process queue
-	for (int i = 1; i <= 10; i++) {
+	for (int i = 1; i <= 100; i++) {
 		std::uniform_int_distribution<int> servTime(1, 100); //Milliseconds
 		std::uniform_int_distribution<int> ariveTime(1, 1000); //Milliseconds
 		Process p(servTime(randEngine), ariveTime(randEngine));
@@ -429,60 +397,60 @@ int main() {
 	std::cout << "Problem 1" << std::endl;
 
 	//First Come First Serve (No Preemption)
-	//firstComeFirstServe(queue);
+	firstComeFirstServe(queue);
 
 	//Round Robin
-	//roundRobin(queue);
+	roundRobin(queue);
 
 	//Shortest Remaining Time
-	//shortestRemTime(queue);
-
+	shortestRemTime(queue);
 
 	//Empty queue for problem 2
-	//queue.clear();
+	queue.clear();
 
-	////Problem 2) Begin with the generation of a similar dataset to problem 1, but this time, use a PRNG to 
-	////(i) give half the processes service times between 80 and 100 milliseconds and
-	////(ii) give the other half service times between 1 and 10 milliseconds. This time, for each algorithm, report 
-	////the results of the overall mean turnaround timeand the mean turnaround time for each group of processes.
-	////Provide an analysis of the results.
 
-	////Populating half the process queue with processes that have 1-10ms service times
-	//for (int i = 1; i <= 5; i++) {
-	//	std::uniform_int_distribution<int> servTime1(1, 10); //Milliseconds
-	//	std::uniform_int_distribution<int> ariveTime(1, 1000); //Milliseconds
-	//	Process p(servTime1(randEngine), ariveTime(randEngine));
-	//	queue.push_back(p);
-	//}
+	//Problem 2) Begin with the generation of a similar dataset to problem 1, but this time, use a PRNG to 
+	//(i) give half the processes service times between 80 and 100 milliseconds and
+	//(ii) give the other half service times between 1 and 10 milliseconds. This time, for each algorithm, report 
+	//the results of the overall mean turnaround timeand the mean turnaround time for each group of processes.
+	//Provide an analysis of the results.
 
-	////Populating half the process queue with processes that have 80-100ms service times
-	//for (int i = 1; i <= 5; i++) {
-	//	std::uniform_int_distribution<int> servTime2(80, 100); //Milliseconds
-	//	std::uniform_int_distribution<int> ariveTime(1, 1000); //Milliseconds
-	//	Process p(servTime2(randEngine), ariveTime(randEngine));
-	//	queue.push_back(p);
-	//}
+	//Populating half the process queue with processes that have 1-10ms service times
+	for (int i = 1; i <= 50; i++) {
+		std::uniform_int_distribution<int> servTime1(1, 10); //Milliseconds
+		std::uniform_int_distribution<int> ariveTime(1, 1000); //Milliseconds
+		Process p(servTime1(randEngine), ariveTime(randEngine));
+		queue.push_back(p);
+	}
+
+	//Populating half the process queue with processes that have 80-100ms service times
+	for (int i = 1; i <= 50; i++) {
+		std::uniform_int_distribution<int> servTime2(80, 100); //Milliseconds
+		std::uniform_int_distribution<int> ariveTime(1, 1000); //Milliseconds
+		Process p(servTime2(randEngine), ariveTime(randEngine));
+		queue.push_back(p);
+	}
 
 	std::cout << "Problem 2" << std::endl;
 
-	////First Come First Serve (No Preemption)
-	//firstComeFirstServe(queue);
+	//First Come First Serve (No Preemption)
+	firstComeFirstServe(queue);
 
-	////Round Robin
-	//roundRobin(queue);
+	//Round Robin
+	roundRobin(queue);
 
-	////Shortest Remaining Time
-	//shortestRemTime(queue);
+	//Shortest Remaining Time
+	shortestRemTime(queue);
+
+	//Empty queue for problem 3
+	queue.clear();
 
 
-	////Empty queue for problem 3
-	//queue.clear();
-
-	////Problem 3) Begin with the generation of a similar dataset to problem 2, but this time, add prioritization
-	////in the following manner : give each process a base priority of 1, but for 10 of the processes, give a
-	////random priority between 2 and 16. For each algorithm, check the priority to ensure the highest priority
-	////process runs next. Use the given algorithm to break any ties of priority in the queue. Record the mean
-	////turnaround time for each algorithm. Provide an analysis of the results.
+	//Problem 3) Begin with the generation of a similar dataset to problem 2, but this time, add prioritization
+	//in the following manner : give each process a base priority of 1, but for 10 of the processes, give a
+	//random priority between 2 and 16. For each algorithm, check the priority to ensure the highest priority
+	//process runs next. Use the given algorithm to break any ties of priority in the queue. Record the mean
+	//turnaround time for each algorithm. Provide an analysis of the results.
 
 	//Populating half the process queue with processes that have 1-10ms service times, 45 of which have a priority of 1
 	//and 5 that have a random priority from 2-16
@@ -519,13 +487,13 @@ int main() {
 
 	std::cout << "Problem 3" << std::endl;
 
-	////First Come First Serve (No Preemption)
-	//firstComeFirstServeP(queue);
+	//First Come First Serve (No Preemption)
+	firstComeFirstServeP(queue);
 
-	////Round Robin
-	//roundRobinP(queue);
+	//Round Robin
+	roundRobinP(queue);
 
-	////Shortest Remaining Time
+	//Shortest Remaining Time
 	shortestRemTimeP(queue);
 
 	system("PAUSE");

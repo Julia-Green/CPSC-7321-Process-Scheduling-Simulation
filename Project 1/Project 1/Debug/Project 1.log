@@ -1,14 +1,14 @@
 ﻿  Source.cpp
 D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(16,20): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(66,22): warning C4018: '<': signed/unsigned mismatch
 D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(71,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(76,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(129,21): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(201,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(205,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(212,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(218,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(283,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(288,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(354,22): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(370,26): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(123,21): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(181,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(185,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(192,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(198,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(255,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(260,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(322,22): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Project 1\Source.cpp(338,26): warning C4018: '<': signed/unsigned mismatch
   Project 1.vcxproj -> D:\Documents\School\UALR\Fall 2021-2022\CPSC-7321-Process-Scheduling-Simulation\Project 1\Debug\Project 1.exe
