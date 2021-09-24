@@ -153,7 +153,7 @@ void roundRobin(std::vector<Process> queue) { //Quantum = 1ms
 		return (i.getWaitTime() < j.getWaitTime()); });
 
 	std::cout << "Mean Turnaround Time: " << mTAT << std::endl
-		<< "Maximum Wait Time: " << queue.at(queue.size() - 1).getWaitTime() << std::endl;
+		<< "Maximum Wait Time: " << queue.at(queue.size() - 1).getWaitTime() << std::endl << std::endl;
 
 }
 
