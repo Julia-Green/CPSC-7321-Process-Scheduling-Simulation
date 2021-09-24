@@ -232,7 +232,7 @@ void roundRobinP(std::vector<Process> queue) { //Testing
 
 //SRT for problem 1 and 2
 void shortestRemTime(std::vector<Process> queue) {
-	std::cout << "Shortest Time Remaining" << std::endl << std::endl;
+	std::cout << "Shortest Remaining Time" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
 
@@ -299,7 +299,7 @@ void shortestRemTime(std::vector<Process> queue) {
 
 //SRT for problem 3
 void shortestRemTimeP(std::vector<Process> queue) {
-	std::cout << "Shortest Time Remaining" << std::endl << std::endl;
+	std::cout << "Shortest Remaining Time" << std::endl << std::endl;
 	std::sort(queue.begin(), queue.end(), [](Process i, Process j) { //Sort based on arrival times
 		return (i.getAriveTime() < j.getAriveTime()); });
 
